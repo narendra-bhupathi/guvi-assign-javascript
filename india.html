@@ -1,0 +1,50 @@
+<body>
+
+
+
+<script>
+
+var request = new XMLHttpRequest()
+
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
+request.send();
+request.onload = function() {
+  // Begin accessing JSON data here
+var s = JSON.parse(this.response)
+
+const great=s.find((i)=>{return i.name == 'India'});
+
+console.log(great);
+
+var keys=[];
+for(var i in great)
+{
+	keys.push(great[i].name);
+}
+
+var values=[];
+for(var i in great)
+{
+	values.push(great[i].capital);
+}
+
+
+
+ var obj = {}; 
+      
+   
+    for(var i = 0; i < keys.length; i++){ 
+        obj[keys[i]] = values[i]; 
+    } 
+      
+    
+    for (var key of Object.keys(obj)) { 
+        console.log(key + " => " + obj[key] + "</br>") 
+    } 
+
+
+
+}
+</script>
+</body>

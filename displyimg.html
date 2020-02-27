@@ -1,0 +1,60 @@
+
+<html>
+
+<head>
+  <script>
+  function imgloop()
+  {
+    var ar = [];
+	
+	
+	var request = new XMLHttpRequest()
+
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
+request.send();
+request.onload = function() {
+  // Begin accessing JSON data here
+var s = JSON.parse(this.response);
+
+
+for(var i in s)
+{
+	ar.push(s[i].flag);
+}
+
+
+
+    for (i = 0; ar.length > i; i++)
+    {
+      var img = new Image(200, 200);
+      img.src = ar[i];
+
+      var src = document.getElementById("elementid");
+      src.appendChild(img);
+    }
+
+  }
+    
+	
+}
+
+
+imgloop();
+	
+  </script>
+</head>
+
+<body>
+
+ 
+  <div id="elementid" >
+  
+  
+  
+  </div>
+ 
+  
+</body>
+
+</html>

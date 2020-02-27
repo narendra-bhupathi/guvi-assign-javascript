@@ -1,0 +1,42 @@
+
+<script>
+// Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest()
+
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
+request.send();
+request.onload = function() {
+  // Begin accessing JSON data here
+var data = JSON.parse(this.response)
+
+
+var keys=[];
+for(var i in data)
+{
+	keys.push(data[i].name);
+}
+
+var values=[];
+for(var i in data)
+{
+	values.push(data[i].capital);
+}
+
+
+ var obj = {}; 
+      
+   
+    for(var i = 0; i < keys.length; i++){ 
+        obj[keys[i]] = values[i]; 
+    } 
+      
+	  
+ for (var key of Object.keys(obj)) { 
+        console.log(key + " => " + obj[key] + "</br>") 
+    } 
+
+
+
+}
+</script>

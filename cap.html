@@ -1,0 +1,32 @@
+<body>
+
+
+
+<script>
+var request = new XMLHttpRequest()
+
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
+request.send();
+request.onload = function() {
+  // Begin accessing JSON data here
+var s = JSON.parse(this.response)
+
+const great=s.map((i)=>{return (i.capital).toUpperCase()});
+
+console.log(great);
+
+var  a=[]
+
+for (i in great){
+
+a.push(great[i]);
+
+}
+console.log(a);
+
+
+
+}
+</script>
+</body>
