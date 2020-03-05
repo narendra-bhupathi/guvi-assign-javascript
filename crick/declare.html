@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+<div id="team1"></div>
+<div id="team2"></div>
+
+<script>
+
+var team1score= localStorage.getItem("t1score");
+
+var team2score= localStorage.getItem("t2score");
+
+var team1scores= localStorage.getItem("play1");
+var team2scores= localStorage.getItem("play2");
+
+if(team1score>team2score)
+{
+
+document.getElementById("result").innerHTML = 'Team 1 Won';
+
+}
+else
+{
+document.getElementById("result").innerHTML = 'Team 2 Won';
+}
+
+
+
+let t1l=team1scores.length
+let t2l=team2scores.length
+
+document.getElementById("team1").innerHTML = team1scores;
+document.getElementById("team2").innerHTML = team2scores;
+
+
+
+
+
+
+
+
+
+//localStorage.removeItem("vari");
+
+document.write(vari);
+
+document.write(a);
+
+</script>
+
+</body>
+</html>
