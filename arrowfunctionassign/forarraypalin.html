@@ -1,0 +1,28 @@
+<script>
+var txt = "";
+var a=[3,23,6,20,29];
+a.forEach(myFunction);
+
+
+
+
+function myFunction(value, index, array) {
+   
+let fact=0;
+
+for(let j=1;j<value;j++)
+{
+if(value%j==0)
+{
+fact=fact+1;
+}
+}
+
+if(fact<=1)
+{
+console.log(value)
+}  
+   
+   
+}
+</script>

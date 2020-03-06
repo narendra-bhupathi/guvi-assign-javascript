@@ -1,0 +1,61 @@
+<--- Return median of two sorted arrays of same size --->
+
+<script>
+function sorting(m1)
+{
+let temp;
+for(let i=0;i<=m1.length-1;i++)
+    {
+      for(let j=i+1;j<m1.length;j++)
+      if(m1[i]>m1[j])
+      {
+        temp=m1[i];
+        m1[i]=m1[j];
+        m1[j]=temp;
+      }
+    }
+	
+return m1;
+
+}
+
+
+function median(a1)
+{
+
+if(a1.length%2==0)
+{
+
+console.log(a1[Math.floor((a1.length)/2)]);
+
+}
+
+else
+{
+
+console.log(a1[Math.floor((a1.length)/2)]);
+
+}
+
+}
+
+let a1=[5,6,7,1,2,3];
+let  a2=[9,8,7,6,5,4,3,2];
+
+
+a1=sorting(a1);
+a2=sorting(a2);
+
+median(a1);
+median(a2);
+
+
+
+console.log(a1);
+console.log(a2);
+
+
+</script>
+
+
+  

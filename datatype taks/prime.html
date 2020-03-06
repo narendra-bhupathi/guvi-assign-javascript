@@ -1,0 +1,27 @@
+<script>
+
+const a=[3,23,6,20,29];
+let fact=0;
+const pa=[];
+let inn=0;
+for(let i=0;i<a.length;i++)
+{
+fact=0;
+
+for(j=1;j<a[i];j++)
+{
+if(a[i]%j==0)
+{
+fact=fact+1;
+}
+}
+
+if(fact<=1)
+{
+pa[inn++]=a[i];
+}
+
+}
+
+console.log(pa,j);
+</script>

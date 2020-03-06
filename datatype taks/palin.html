@@ -1,0 +1,30 @@
+<script>
+
+const a=[33,232,62,202,292];
+let fact=0;
+const pa=[];
+let inn=0;
+for(let i=0;i<a.length;i++)
+{
+fact=0;
+let n=a[i]
+let sum=0;
+let rem=0;
+while(n!=0)
+{
+rem=n%10;
+sum=sum*10+rem;
+n=Math.floor(n/10);
+
+}
+
+
+if(sum==a[i])
+{
+pa[inn++]=a[i];
+}
+
+}
+
+console.log(pa);
+</script>
