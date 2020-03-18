@@ -1,0 +1,34 @@
+<html>
+
+
+<script>
+
+function execute(val1,cd)
+{
+if(val1==1)
+{
+setTimeout(function(){
+cd("happy new year");
+},10000*val1);
+
+}
+setTimeout(function(){
+cd(val1);
+},1000*val1);
+
+
+};
+
+var a;
+
+for(var i=10;i>0;i--)
+{
+a=execute(i,function(data){console.log(data);})
+}
+
+
+
+
+</script>
+
+</html>
